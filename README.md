@@ -1,19 +1,15 @@
-# Finsweet — Static HTML/CSS site
+# Finsweet - Статический HTML/CSS веб-сайт.
 
-This workspace contains a responsive static HTML/CSS implementation of the provided templates.
+Это рабочее пространство содержит адаптивную статическую HTML/CSS реализацию предоставленных шаблонов.
+- Другие страницы: `blog.html `, `post.html `, `about.html `, `category.html `, `author.html `, `contact.html `, `privacy.html `.
+- Стили находятся в разделе "assets/css/style.css`.
 
-- Open `index.html` in your browser to view the Home page.
-- Other pages: `blog.html`, `post.html`, `about.html`, `category.html`, `author.html`, `contact.html`, `privacy.html`.
-- Styles are in `assets/css/style.css`.
 
-Notes:
-- No JavaScript is used — animations and transitions are implemented with CSS only.
-- Images are placeholders (via placeholder service). Replace them with real assets in `assets/images/` as needed.
 
-To preview locally, open `index.html` in your browser or run a local static server (recommended):
+Для локального просмотра откройте "index.html" в своем браузере или запустите локальный статический сервер (рекомендуется):
 
-```powershell
-# from workspace root
+``powershell
+# из workspace root
 python -m http.server 8000
-# then open http://localhost:8000/index.html
+# затем откройте http://localhost:8000/index.html
 ```

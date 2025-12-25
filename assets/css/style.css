@@ -1,10 +1,4 @@
-/* Finsweet — Complete responsive layout | Updated 2025-12-25 */
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@300;400;600;700;800&display=swap');
-
-/* ============================================================
-   ROOT & GLOBAL STYLES
-   ============================================================ */
-
 :root {
   --max-width: 1000px;
   --bg: #f5f3f5;
@@ -46,8 +40,6 @@ body {
   padding: 0 40px;
 }
 
-/* Typography */
-/* Reduce default heading weight so only <strong> elements appear bold */
 h1 {
   font-size: 44px;
   line-height: 1.06;
@@ -75,15 +67,10 @@ h4 {
   margin: 0 0 8px;
   font-weight: 400;
 }
-
-/* Ensure article content has regular weight and remove inline bold */
 .post, .post * {
   font-weight: 400 !important;
   font-style: inherit;
 }
-
-/* NOTE: use <strong> only when semantic emphasis is required; styling is normalized above */
-
 p {
   margin: 0 0 12px;
   color: var(--muted);
@@ -107,16 +94,13 @@ p {
   font-weight: 400;
 } 
 
-/* SECTION SPACING ------------------------------------------------
-   Add consistent vertical spacing between major sections to avoid
-   sections being visually 'stuck' together. Adjust --section-gap to
-   control overall spacing. */
+
 
 :root {
-  --section-gap: 120px; /* main vertical spacing for sections */
+  --section-gap: 120px; 
 }
 
-/* Apply extra padding to main sections for more breathing room */
+
 .featured,
 .about-mission,
 .categories-section,
@@ -129,7 +113,7 @@ p {
   padding-bottom: calc(var(--section-gap) * 0.7);
 }
 
-/* Small extra margins between consecutive sections */
+
 .featured + .about-mission,
 .about-mission + .categories-section,
 .categories-section + .story-section,
@@ -139,9 +123,7 @@ p {
   margin-top: calc(var(--section-gap) * 0.5);
 }
 
-/* ============================================================
-   HEADER & NAVIGATION
-   ============================================================ */
+
 
 .site-header {
   background: var(--nav);
@@ -206,7 +188,6 @@ p {
   transform: none;
 }
 
-/* Simple active link underline — add `class="active"` to the nav <a> on each page */
 .nav a.active {
   color: var(--accent);
   font-weight: 700;
@@ -221,10 +202,6 @@ p {
   color: #0b0b0b;
   text-decoration: none;
 }
-
-/* ============================================================
-   HERO SECTION
-   ============================================================ */
 
 .hero {
   padding: 110px 0 60px;
@@ -307,11 +284,6 @@ p {
   background: var(--accent);
   color: #111;
 }
-
-/* ============================================================
-   BUTTONS
-   ============================================================ */
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -343,9 +315,7 @@ p {
   outline: 3px solid rgba(107, 59, 214, 0.12);
 }
 
-/* ============================================================
-   FEATURED SECTION
-   ============================================================ */
+
 
 .featured {
   padding: 64px 0 48px;
@@ -420,9 +390,7 @@ p {
   font-weight: 800;
   color: var(--nav);
 }
-/* ============================================================
-   CARDS & SIDEBAR
-   ============================================================ */
+
 
 .card {
   background: var(--card);
@@ -443,7 +411,6 @@ p {
   background-position: center;
 }
 
-/* Ensure <img class="card-media"> fills its card and crops cleanly */
 img.card-media {
   width: 100%;
   height: 300px;
@@ -498,9 +465,7 @@ img.card-media {
   background: linear-gradient(135deg, #fff7e6, #fff2da);
 }
 
-/* ============================================================
-   ABOUT MISSION SECTION
-   ============================================================ */
+
 
 .about-mission {
   padding: 56px 0;
@@ -583,24 +548,19 @@ img.card-media {
   }
 }
 
-/* ============================================================
-   STORY SECTION
-   ============================================================ */
+
 
 .story-section {
-  /* slightly larger vertical space for breathing room */
   padding: calc(var(--section-gap) * 0.6) 0;
 }
 
 .story-grid {
   display: grid;
-  /* fixed image column on the right so images align and text has free space */
   grid-template-columns: 1fr 440px;
   gap: 48px;
   align-items: center;
 }
 
-/* reversed layout still swaps order but keeps image column width */
 .story-grid.reversed {
   grid-template-columns: 1fr 440px;
 }
@@ -615,7 +575,6 @@ img.card-media {
 
 .story-image {
   position: relative;
-  /* push the image to the right edge of its column */
   justify-self: end;
 }
 
@@ -630,13 +589,11 @@ img.card-media {
   object-fit: cover;
 }
 
-/* give the text panel a bit more right padding so text doesn't touch the image */
 .story-panel {
   padding-right: 40px;
   max-width: 720px;
 }
 
-/* keep mobile behavior clean */
 @media (max-width: 980px) {
   .story-grid { grid-template-columns: 1fr; gap: 28px; }
   .story-image { justify-self: center; }
@@ -770,10 +727,6 @@ img.card-media {
   }
 }
 
-/* ============================================================
-   CATEGORIES SECTION
-   ============================================================ */
-
 .categories-section {
   padding: 56px 0;
 }
@@ -853,10 +806,6 @@ img.card-media {
   }
 }
 
-/* ============================================================
-   LOGOS SECTION
-   ============================================================ */
-
 .featured-logos {
   padding: 28px 0;
 }
@@ -875,10 +824,6 @@ img.card-media {
   filter: grayscale(0.04);
   height: 22px;
 }
-
-/* ============================================================
-   TESTIMONIALS SECTION
-   ============================================================ */
 
 .testimonials {
   padding: 56px 20px;
@@ -1012,10 +957,6 @@ img.card-media {
 }
 
 
-/* ============================================================
-   POSTS SECTION
-   ============================================================ */
-
 .posts {
   display: flex;
   gap: 32px;
@@ -1146,7 +1087,6 @@ img.card-media {
   margin-top: 6px;
 }
 
-/* Make links in the posts list non-clickable and remove purple accent */
 .posts-list a {
   color: inherit;
   text-decoration: none;
@@ -1188,10 +1128,6 @@ img.card-media {
   }
 }
 
-
-/* ============================================================
-   SIDEBAR POSTS
-   ============================================================ */
 
 .sidebar .posts-header {
   display: flex;
@@ -1255,10 +1191,6 @@ img.card-media {
   margin: 6px 6px 0 0;
   color: var(--muted);
 }
-
-/* ============================================================
-   POST PAGE STYLES
-   ============================================================ */
 
 .post {
   padding: 48px 0;
@@ -1402,10 +1334,9 @@ img.card-media {
   grid-template-columns: repeat(3, 1fr);
   gap: 26px;
   margin: 28px auto 0;
-  max-width: 1100px; /* center and give horizontal breathing room */
+  max-width: 1100px;
 }
 
-/* Clean, flat cards: remove heavy focus/hover transitions and outlines */
 .related-cards .card {
   background: #fff;
   border-radius: 12px;
@@ -1414,11 +1345,11 @@ img.card-media {
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(17,18,26,0.04);
-  transition: none; /* remove transform/box-shadow transitions */
+  transition: none;
 }
 
 .related-cards .card:hover {
-  transform: none; /* no lift on hover */
+  transform: none;
   box-shadow: 0 6px 18px rgba(17,18,26,0.04);
 }
 
@@ -1445,13 +1376,13 @@ img.card-media {
 
 .related-cards h4 a {
   color: var(--text);
-  text-decoration: none; /* remove underline/outline */
+  text-decoration: none;
   transition: none;
 }
 
 .related-cards h4 a:hover,
 .related-cards h4 a:focus {
-  color: var(--accent-2); /* gentle color change but no transition */
+  color: var(--accent-2);
   text-decoration: none;
   outline: none;
 }
@@ -1473,10 +1404,6 @@ img.card-media {
     grid-template-columns: 1fr;
   }
 }
-
-/* ============================================================
-   CONTACT SECTION
-   ============================================================ */
 
 .contact-grid {
   display: grid;
@@ -1502,10 +1429,6 @@ img.card-media {
   border: 1px solid var(--muted-2);
   border-radius: 8px;
 }
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
 
 .site-footer {
   background: var(--footer);
@@ -1613,9 +1536,6 @@ img.card-media {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* ============================================================
-   PAGE HERO & STATS
-   ============================================================ */
 
 .page-hero.small {
   padding: 36px 0;
@@ -1676,11 +1596,6 @@ img.card-media {
   margin-top: 4px;
   line-height: 1.3;
 }
-
-/* ============================================================
-   MISSION & VISION
-   ============================================================ */
-
 .mission-vision {
   padding: 48px 0;
   display: grid;
@@ -1745,9 +1660,7 @@ img.card-media {
   }
 }
 
-/* ============================================================
-   AUTHORS SECTION
-   ============================================================ */
+
 
 .authors {
   padding: 48px 20px;
@@ -1758,7 +1671,6 @@ img.card-media {
   display: none;
 }
 
-/* Clean authors grid — white cards, more white space */
 .authors-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

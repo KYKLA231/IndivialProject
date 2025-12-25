@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- Edited: layout/spacing updates applied 2025-12-24 -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">Finsweet</div>
       <nav class="nav">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="blog.html">Blog</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
@@ -24,9 +25,9 @@
     <section class="hero" style="background-image:url('assets/photos/andrew-johnson.jpg')">
       <div class="container hero-inner">
         <div class="hero-left">
-          <div class="posted">Posted on <strong style="color:var(--accent-2);">Startup</strong></div>
-          <h1>Step-by-step guide to choosing great font pairs</h1>
-          <div class="hero-meta">By <a href="author.html">James West</a> | May 23, 2022</div>
+          <div class="posted">By <a href="author.html" style="color:var(--accent-2);">John Doe</a> | May 23, 2022</div>
+          <h1 class="text-highlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h1>
+          <div class="hero-meta">By <a href="author.html">John Doe</a> | May 23, 2022</div>
           <p class="hero-excerpt">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
           <a class="btn primary" href="post.html">Read More &gt;</a>
         </div>
@@ -35,14 +36,20 @@
 
     <section class="featured container">
       <div class="featured-grid">
-        <article class="card">
-          <div class="card-media" style="background-image:url('assets/photos/featured.jpg')"></div>
-          <div class="card-body">
-            <span class="meta">Featured</span>
-            <h3>Featured Post</h3>
-            <p>Short summary of the featured post that invites the visitor to click through and read more.</p>
+        <div class="featured-left">
+          <div class="posts-header">
+            <h4>Featured Post</h4>
           </div>
-        </article>
+
+          <article class="card">
+            <div class="card-media" style="background-image:url('assets/photos/featured.jpg')"></div>
+            <div class="card-body">
+              <div class="meta">By <a href="author.html" style="color:var(--accent-2);">John Doe</a> | May 23, 2022</div>
+              <p class="text-highlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              <a class="btn primary" href="post.html">Read Here &gt;</a>
+            </div>
+          </article>
+        </div>
 
         <aside class="sidebar">
           <div class="posts-header">
@@ -82,14 +89,14 @@
         <div class="about-left">
           <div class="label">About us</div>
           <h3>We are a community of content writers who share their learnings</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p><span class="text-highlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</span> tempor incididunt ut labore et dolore magna aliqua.</p>
           <a class="read-more" href="about.html">Read More &gt;</a>
         </div>
 
         <div class="about-right">
           <div class="label">Our mission</div>
           <h3>Creating valuable content for creatives all around the world</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p><span class="text-highlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</span> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
       </div>
     </section>
